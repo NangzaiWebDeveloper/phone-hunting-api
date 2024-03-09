@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- daisyUI link  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <h1 class="text-xl font-bold">hey how are you</h1>
+    </header>
+
+
+    <main class="container mx-auto">
+        <section class="bg-gray-200 p-4 m-4">
+            <input id="user-search" type="text" placeholder="Search Here..." class="input input-bordered w-full max-w-xs" />
+            <button onclick="searchPhn()" class="btn btn-accent">Search</button>
+        </section>
+
+
+        <section>
+            <!-- loading spinner is here  -->
+            <div id="loading-spinner" class="hidden flex justify-center items-center">
+                <span class="loading loading-spinner loading-lg"></span>
+            </div>
+
+            <!-- here is all phones have  -->
+            <div id="container-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Shoes!</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Buy Now</button>
+                      </div>
+                    </div>
+                  </div> -->
+            </div>
+
+            <!-- see more phone is here  -->
+            <div id="get-button" class="hidden text-center my-8">
+                <button onclick="seeMore()" id="see-more" class="btn btn-accent">See More</button>
+            </div>
+        </section>
+
+
+        <section>
+            <!-- SHOW Details modal -->
+            <!-- Open the modal using ID.showModal() method -->
+            <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                    <h3 id="show-original-name" class="font-bold text-lg"></h3>
+                    <div id="show-detail-container" class="flex items-center justify-center flex-col">
+                        
+                    </div>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </section>
+    </main>
+    <footer>
+        
+    </footer>
+
+
+    <!-- script start from here  -->
+    <script src="js/phone.js"></script>
+    <!-- <script src="js/recap.js"></script> -->
+</body>
+</html>
